@@ -11,6 +11,13 @@ public class App {
         // LIST OF THE HOMIES
         ArrayList<String> homies = new ArrayList<>
         (List.of("Martittie El Jefe", "Bri Bri", "Benji", "Chicago Fling", "Pollyana", "Hillybob"));
+        // [0] = martina
+        // [1] = breanna
+        // [2] = benjamon
+        // [3] = HAHAHAHAH
+        // [4] = pj
+        // [5] = hadil
+        
         // // DISPLAYING LIST JUST TO SEE 
         // for (String h : homies) {
         //     System.out.println(h);
@@ -62,17 +69,97 @@ public class App {
                     System.out.println(homies.get(a));
                 }
                 }
-            }
+        }
         
         if (userInput.equals("b")){
+            System.out.println("A homie is missing a passport stamp! Let's fix that! Which homie is missing a stamp?");
+            userInput = sc.nextLine();
+            if (userInput.contains("martina")){
+                 System.out.println("Where did Martina go?:");
+                 userInput = sc.nextLine();
+                 places.get(0).add(userInput); 
+            }
+            if (userInput.contains("breanna")){
+                System.out.println("Where did Breanna go?:");
+                userInput = sc.nextLine();
+                places.get(1).add(userInput); 
+           }
+           if (userInput.contains("benjamin")){
+            System.out.println("Where did Benjamin go?:");
+            userInput = sc.nextLine();
+            places.get(2).add(userInput); 
+            }
+            if (userInput.contains("chicago")){
+                System.out.println("Where did [unknown]] go?:");
+                userInput = sc.nextLine();
+                places.get(3).add(userInput); 
+            }
+            if (userInput.contains("pollyana")){
+                System.out.println("Where did Pj go?:");
+                userInput = sc.nextLine();
+                places.get(4).add(userInput); 
+            }
+            if (userInput.contains("hadil")){
+                System.out.println("Where did Hadil go?:");
+                userInput = sc.nextLine();
+                places.get(5).add(userInput); 
+            }
+        }
+
+        String individualHomies = homies.get(0);
+        HashSet<String> homiesPlaces = places.get(0);
+
+        if (userInput.equals("c")){
             System.out.println("You wanna know where a homie has been. Which homie do you choose?");
             userInput = sc.nextLine();
-            for (String h : homies){
-                if (userInput.contains("martina")){
-                   
+            if (userInput.contains("martina")){
+                System.out.println("Martina has been to:");
+                for (String c : homiesPlaces){
+                    System.out.println(c);
                 }
             }
+        if (userInput.contains("breanna")){
+            individualHomies = homies.get(1);
+            homiesPlaces = places.get(1);
+            System.out.println("Breanna has been to:");
+            for (String c : homiesPlaces){
+                System.out.println(c);
             }
+        }
+        if (userInput.contains("benjamin")){
+            individualHomies = homies.get(2);
+            homiesPlaces = places.get(2);
+            System.out.println("Benjamin has been to:");
+            for (String c : homiesPlaces){
+                System.out.println(c);
+            }
+        }
+        if (userInput.contains("chicago")){
+            individualHomies = homies.get(3);
+            homiesPlaces = places.get(3);
+            System.out.println("[unknown] has been to:");
+            for (String c : homiesPlaces){
+                System.out.println(c);
+            }
+        }
+        if (userInput.contains("pollyana")){
+            individualHomies = homies.get(4);
+            homiesPlaces = places.get(4);
+            System.out.println("Pj has been to:");
+            for (String c : homiesPlaces){
+                System.out.println(c);
+            }
+        }
+        if (userInput.contains("hadil")){
+            individualHomies = homies.get(5);
+            homiesPlaces = places.get(5);
+            System.out.println("Hadil has been to:");
+            for (String c : homiesPlaces){
+                System.out.println(c);
+            }
+        }
+        }
+        
            
 
 
